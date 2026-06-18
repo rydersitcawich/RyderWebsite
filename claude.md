@@ -36,20 +36,19 @@ Optimize for taste, performance, and accessibility over feature count.
 
 ## Design language
 
-The site should feel like a quiet gallery: warm, natural, uncluttered, with
-generous whitespace and a few deliberate accents. Aesthetic direction is
-Japandi meets understated American workwear (think natural oak/walnut, linen,
-woodblock prints, ceramics).
+The site should feel like a quiet gallery: clean, minimal, uncluttered, with
+generous whitespace. The discipline is **one** chromatic color — navy — over an
+otherwise neutral grayscale foundation. Navy is the single accent and carries
+the identity; it's used consistently for section labels, links, buttons, focus
+states, and small detail (dots, accent borders). Everything else is neutral.
+Resist adding a second accent color.
 
 Palette (define as Tailwind tokens):
-- `cream` background, warm off-white — `#F5F1EA`
-- `paper` slightly lighter surface — `#FAF8F4`
-- `ink` primary text, warm near-black — `#211C16`
-- `oak` warm mid-brown — `#8B6F47`
-- `walnut` deep brown — `#4F3F2E`
-- `olive` muted sage-green — `#74795B`
-- `terracotta` single warm accent (links, highlights) — `#BC6A4C`
-- `frame` near-black for hairline borders/detail — `#1A1A1A`
+- `paper` background, clean off-white just off neutral — `#F6F6F3`
+- `surface` cards / raised surfaces, pure white — `#FFFFFF`
+- `ink` primary text, near-black with a faint cool undertone — `#181A20`
+- `line` near-black for hairline borders/detail (always at low opacity) — `#1B1D24`
+- `navy` the single accent (labels, links, buttons, focus, detail) — `#1E3A63`
 
 Type:
 - Display/headings: a refined serif (e.g. Fraunces or a transitional serif).

@@ -10,11 +10,11 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-frame/10 bg-cream/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line/10 bg-paper/80 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
         <Link
           href="/"
-          className="font-serif text-lg tracking-tightish text-ink transition-colors hover:text-terracotta"
+          className="font-serif text-lg tracking-tightish text-ink transition-colors hover:text-navy"
         >
           {site.name}
         </Link>
@@ -24,7 +24,7 @@ export function SiteHeader() {
               <li key={item.href} className="hidden sm:block">
                 <Link
                   href={item.href}
-                  className="text-ink/70 transition-colors hover:text-terracotta"
+                  className="text-ink/70 transition-colors hover:text-navy"
                 >
                   {item.label}
                 </Link>
@@ -33,7 +33,7 @@ export function SiteHeader() {
             <li>
               <Link
                 href={site.resumeHref}
-                className="rounded-full border border-frame/20 px-4 py-1.5 text-ink transition-colors hover:border-terracotta hover:text-terracotta"
+                className="rounded-full border border-line/20 px-4 py-1.5 text-ink transition-colors hover:border-navy hover:text-navy"
               >
                 Résumé
               </Link>

@@ -16,7 +16,7 @@ export interface ProjectImage {
   /** Optional caption rendered under the image in the case study. */
   caption?: string;
   /**
-   * How the image fills its frame. "cover" (default) crops to fill — good for
+   * How the image fills its line. "cover" (default) crops to fill — good for
    * photos and screenshots. "contain" shows the whole image without cropping —
    * use it for diagrams and posters.
    */

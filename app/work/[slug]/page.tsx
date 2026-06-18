@@ -35,13 +35,13 @@ export default function ProjectPage({
       <Container>
         <Link
           href="/#work"
-          className="inline-flex items-center gap-1 text-sm text-ink/60 transition-colors hover:text-terracotta"
+          className="inline-flex items-center gap-1 text-sm text-ink/60 transition-colors hover:text-navy"
         >
           <span aria-hidden="true">←</span> Back to work
         </Link>
 
-        <header className="mt-8 border-b border-frame/10 pb-10">
-          <p className="text-xs uppercase tracking-[0.2em] text-oak">
+        <header className="mt-8 border-b border-line/10 pb-10">
+          <p className="text-xs uppercase tracking-[0.2em] text-navy">
             {project.period}
           </p>
           <h1 className="mt-3 max-w-3xl font-serif text-4xl leading-tight tracking-tightish text-ink sm:text-5xl">
@@ -55,7 +55,7 @@ export default function ProjectPage({
             {project.stack.map((tech) => (
               <li
                 key={tech}
-                className="rounded-full border border-frame/10 bg-paper px-3 py-1 text-xs text-walnut"
+                className="rounded-full border border-line/15 bg-surface px-3 py-1 text-xs text-ink/65"
               >
                 {tech}
               </li>
@@ -70,7 +70,7 @@ export default function ProjectPage({
                   href={link.href}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-walnut px-5 py-2.5 text-paper transition-colors hover:bg-ink"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-navy px-5 py-2.5 text-surface transition-colors hover:bg-ink"
                 >
                   {link.label}
                   <span aria-hidden="true">↗</span>
@@ -93,13 +93,13 @@ export default function ProjectPage({
         )}
 
         {/* Highlights */}
-        <section className="border-b border-frame/10 py-10">
+        <section className="border-b border-line/10 py-10">
           <h2 className="sr-only">Highlights</h2>
           <ul className="grid gap-4 sm:grid-cols-3">
             {project.highlights.map((highlight, i) => (
               <li
                 key={i}
-                className="rounded-xl bg-paper p-5 text-sm leading-relaxed text-ink/80"
+                className="rounded-xl border-l-2 border-navy/70 bg-surface p-5 text-sm leading-relaxed text-ink/80"
               >
                 {highlight}
               </li>
@@ -125,7 +125,7 @@ export default function ProjectPage({
 
         {/* Gallery */}
         {project.gallery && project.gallery.length > 0 && (
-          <section className="border-t border-frame/10 py-10">
+          <section className="border-t border-line/10 py-10">
             <h2 className="sr-only">Gallery</h2>
             <div className="grid gap-6 sm:grid-cols-2">
               {project.gallery.map((image) => (
@@ -140,10 +140,10 @@ export default function ProjectPage({
           </section>
         )}
 
-        <div className="border-t border-frame/10 pt-10">
+        <div className="border-t border-line/10 pt-10">
           <Link
             href="/#work"
-            className="inline-flex items-center gap-1 text-sm text-terracotta transition-colors hover:text-walnut"
+            className="inline-flex items-center gap-1 text-sm text-navy transition-colors hover:text-ink"
           >
             <span aria-hidden="true">←</span> Back to all work
           </Link>

@@ -9,14 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#F5F1EA",
-        paper: "#FAF8F4",
-        ink: "#211C16",
-        oak: "#8B6F47",
-        walnut: "#4F3F2E",
-        olive: "#74795B",
-        terracotta: "#BC6A4C",
-        frame: "#1A1A1A",
+        // Minimal, near-neutral foundation — navy is the only accent.
+        paper: "#F6F6F3", // page background — clean off-white, just off neutral
+        surface: "#FFFFFF", // cards / raised surfaces
+        ink: "#181A20", // primary text — near-black, faint cool undertone
+        line: "#1B1D24", // hairline borders (always used at low opacity)
+        navy: "#1E3A63", // THE accent — labels, links, buttons, focus, detail
       },
       fontFamily: {
         serif: ["var(--font-fraunces)", "Georgia", "serif"],

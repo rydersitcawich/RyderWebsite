@@ -3,7 +3,7 @@ import { Container } from "@/components/container";
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="mt-24 border-t border-frame/10 py-12">
+    <footer id="contact" className="mt-24 border-t border-line/10 py-12">
       <Container className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-prose">
           <h2 className="font-serif text-xl text-ink">Get in touch</h2>
@@ -12,7 +12,7 @@ export function SiteFooter() {
           </p>
           <a
             href={`mailto:${site.email}`}
-            className="mt-2 inline-block text-terracotta underline-offset-4 hover:underline"
+            className="mt-2 inline-block text-navy underline-offset-4 hover:underline"
           >
             {site.email}
           </a>
@@ -23,7 +23,7 @@ export function SiteFooter() {
               <li key={s.href}>
                 <a
                   href={s.href}
-                  className="text-ink/70 transition-colors hover:text-terracotta"
+                  className="text-ink/70 transition-colors hover:text-navy"
                   {...(s.href.startsWith("http")
                     ? { target: "_blank", rel: "noreferrer noopener" }
                     : {})}

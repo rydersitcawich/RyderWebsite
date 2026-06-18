@@ -17,7 +17,7 @@ export function ProjectFigure({
   return (
     <figure>
       <div
-        className={`relative ${aspect} w-full overflow-hidden rounded-2xl border border-frame/10 bg-paper`}
+        className={`relative ${aspect} w-full overflow-hidden rounded-2xl border border-line/10 bg-surface`}
       >
         <Image
           src={image.src}

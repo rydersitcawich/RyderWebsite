@@ -13,7 +13,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="py-20 sm:py-28">
         <Container>
-          <p className="text-sm uppercase tracking-[0.2em] text-oak">
+          <p className="text-sm uppercase tracking-[0.2em] text-navy">
             {site.role}
           </p>
           <h1 className="mt-5 max-w-3xl font-serif text-4xl leading-[1.1] tracking-tightish text-ink sm:text-6xl">
@@ -25,13 +25,13 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap items-center gap-4 text-sm">
             <Link
               href="#work"
-              className="rounded-full bg-walnut px-5 py-2.5 text-paper transition-colors hover:bg-ink"
+              className="rounded-full bg-navy px-5 py-2.5 text-surface transition-colors hover:bg-ink"
             >
               See selected work
             </Link>
             <Link
               href="#contact"
-              className="rounded-full border border-frame/20 px-5 py-2.5 text-ink transition-colors hover:border-terracotta hover:text-terracotta"
+              className="rounded-full border border-line/20 px-5 py-2.5 text-ink transition-colors hover:border-navy hover:text-navy"
             >
               Get in touch
             </Link>
@@ -59,12 +59,12 @@ export default function HomePage() {
             {experience.map((job) => (
               <li
                 key={`${job.company}-${job.role}`}
-                className="grid gap-2 border-t border-frame/10 pt-8 sm:grid-cols-[1fr_2fr] sm:gap-8"
+                className="grid gap-2 border-t border-line/10 pt-8 sm:grid-cols-[1fr_2fr] sm:gap-8"
               >
                 <div>
                   <h3 className="font-serif text-xl text-ink">{job.company}</h3>
                   <p className="mt-1 text-sm text-ink/70">{job.role}</p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.15em] text-oak">
+                  <p className="mt-1 text-xs uppercase tracking-[0.15em] text-navy">
                     {job.period}
                   </p>
                   <p className="text-xs text-ink/50">{job.location}</p>
@@ -73,7 +73,7 @@ export default function HomePage() {
                   {job.bullets.map((bullet, i) => (
                     <li
                       key={i}
-                      className="relative pl-5 text-ink/80 before:absolute before:left-0 before:top-2.5 before:h-1.5 before:w-1.5 before:rounded-full before:bg-olive"
+                      className="relative pl-5 text-ink/80 before:absolute before:left-0 before:top-2.5 before:h-1.5 before:w-1.5 before:rounded-full before:bg-navy"
                     >
                       {bullet}
                     </li>
@@ -97,7 +97,7 @@ export default function HomePage() {
             </div>
             {site.portrait && (
               <div className="order-1 sm:order-2">
-                <div className="relative aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl border border-frame/10 bg-paper">
+                <div className="relative aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl border border-line/10 bg-surface">
                   <Image
                     src={site.portrait.src}
                     alt={site.portrait.alt}
