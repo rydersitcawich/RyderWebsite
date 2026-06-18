@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { SectionHeading } from "@/components/section-heading";
@@ -88,10 +89,25 @@ export default function HomePage() {
       <section id="about" className="scroll-mt-20 py-16">
         <Container>
           <SectionHeading eyebrow="About" title="A little more" />
-          <div className="max-w-prose space-y-5 text-lg leading-relaxed text-ink/80">
-            {site.about.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
+          <div className="grid gap-10 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] sm:items-start sm:gap-12">
+            <div className="order-2 max-w-prose space-y-5 text-lg leading-relaxed text-ink/80 sm:order-1">
+              {site.about.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
+            {site.portrait && (
+              <div className="order-1 sm:order-2">
+                <div className="relative aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl border border-frame/10 bg-paper">
+                  <Image
+                    src={site.portrait.src}
+                    alt={site.portrait.alt}
+                    fill
+                    sizes="(min-width: 640px) 20rem, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </Container>
       </section>

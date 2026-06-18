@@ -26,7 +26,7 @@ export function ProjectCard({ project }: { project: Project }) {
         ))}
       </ul>
 
-      <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-terracotta">
+      <span className="mt-6 inline-flex items-center gap-1 pt-2 text-sm font-medium text-terracotta">
         Read case study
         <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
           →

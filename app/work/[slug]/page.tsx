@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/container";
+import { ProjectFigure } from "@/components/project-figure";
 import { projects, getProject } from "@/content/projects";
 
 export function generateStaticParams() {
@@ -79,6 +80,18 @@ export default function ProjectPage({
           )}
         </header>
 
+        {/* Cover image */}
+        {project.cover && (
+          <div className="py-10">
+            <ProjectFigure
+              image={project.cover}
+              sizes="(min-width: 1024px) 64rem, 100vw"
+              aspect="aspect-[16/9]"
+              priority
+            />
+          </div>
+        )}
+
         {/* Highlights */}
         <section className="border-b border-frame/10 py-10">
           <h2 className="sr-only">Highlights</h2>
@@ -109,6 +122,23 @@ export default function ProjectPage({
             </section>
           ))}
         </div>
+
+        {/* Gallery */}
+        {project.gallery && project.gallery.length > 0 && (
+          <section className="border-t border-frame/10 py-10">
+            <h2 className="sr-only">Gallery</h2>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {project.gallery.map((image) => (
+                <ProjectFigure
+                  key={image.src}
+                  image={image}
+                  sizes="(min-width: 640px) 32rem, 100vw"
+                  aspect="aspect-[4/3]"
+                />
+              ))}
+            </div>
+          </section>
+        )}
 
         <div className="border-t border-frame/10 pt-10">
           <Link

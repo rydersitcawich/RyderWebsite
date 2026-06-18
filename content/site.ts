@@ -3,6 +3,11 @@ export interface SocialLink {
   href: string;
 }
 
+export interface Portrait {
+  src: string;
+  alt: string;
+}
+
 export interface SiteConfig {
   name: string;
   role: string;
@@ -13,6 +18,8 @@ export interface SiteConfig {
   intro: string;
   /** Longer about paragraphs. */
   about: string[];
+  /** Headshot shown in the About section. */
+  portrait?: Portrait;
   socials: SocialLink[];
 }
 
@@ -29,6 +36,10 @@ export const site: SiteConfig = {
     "Outside of building, I was a Head TA for CIS 1200, one of Penn's biggest CS courses, where I led a 40-person teaching team supporting 200-400 students a semester. I've spent the last two summers shipping production software at Meta and Travelers.",
     "When I'm not at a keyboard you'll probably find me cooking, lifting, playing soccer, or at a poker table.",
   ],
+  portrait: {
+    src: "/projects/Headshot.png",
+    alt: "Portrait of Ryder Sitcawich",
+  },
   socials: [
     { label: "GitHub", href: "https://github.com/rydersitcawich" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/ryder-sitcawich/" },

@@ -8,6 +8,21 @@ export interface ProjectSection {
   body: string[];
 }
 
+export interface ProjectImage {
+  /** Path under /public, e.g. "/projects/penncloud-admin.png". */
+  src: string;
+  /** Required for accessibility — describe what the image shows. */
+  alt: string;
+  /** Optional caption rendered under the image in the case study. */
+  caption?: string;
+  /**
+   * How the image fills its frame. "cover" (default) crops to fill — good for
+   * photos and screenshots. "contain" shows the whole image without cropping —
+   * use it for diagrams and posters.
+   */
+  fit?: "cover" | "contain";
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -22,6 +37,10 @@ export interface Project {
   /** Full case-study sections. */
   sections: ProjectSection[];
   links: ProjectLink[];
+  /** Lead image shown on the card and at the top of the case study. */
+  cover?: ProjectImage;
+  /** Additional images shown in the case-study body. */
+  gallery?: ProjectImage[];
 }
 
 export const projects: Project[] = [
@@ -70,6 +89,12 @@ export const projects: Project[] = [
     links: [
       { label: "View code", href: "https://github.com/rydersitcawich/Kewl" },
     ],
+    cover: {
+      src: "/projects/Kewl.png",
+      alt: "Capstone research poster for “Kewl Solutions”: a hydrogel thermal battery with intelligent workload optimization, covering the cooling material, the sprinting policy, and the Bellman oracle.",
+      caption: "Project poster: the hydrogel cooling material, intelligent sprinting, and the Bellman oracle that decides when to sprint.",
+      fit: "contain",
+    },
   },
   {
     slug: "penncloud",
@@ -106,7 +131,18 @@ export const projects: Project[] = [
         ],
       },
     ],
-    links: [],
+    links: [
+      {
+        label: "View code",
+        href: "https://gitfront.io/r/connorcc/M4rqAYMk3CNq/pcloud/",
+      },
+    ],
+    cover: {
+      src: "/projects/PennCloudArchDiagram.png",
+      alt: "PennCloud architecture diagram: clients and a load balancer in front of three frontend servers, a backend coordinator, an SMTP server, and three clusters of replicated primary/secondary storage nodes.",
+      caption: "System architecture: load-balanced frontends, a backend coordinator, and three clusters of replicated storage nodes.",
+      fit: "contain",
+    },
   },
   {
     slug: "pennos",
