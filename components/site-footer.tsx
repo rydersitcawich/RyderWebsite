@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="max-w-prose">
           <h2 className="font-serif text-xl text-ink">Get in touch</h2>
           <p className="mt-2 text-sm text-ink/70">
-            Open to conversations about systems, internships, and good problems.
+            Open to conversations about systems, ethics, and cool opportunities.
           </p>
           <a
             href={`mailto:${site.email}`}
