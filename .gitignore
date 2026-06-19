@@ -29,3 +29,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local-only full-res source images (kept as backups, not deployed)
+public/projects/*-full.*

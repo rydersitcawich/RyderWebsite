@@ -37,7 +37,7 @@ export const site: SiteConfig = {
     "When I'm not at a keyboard you'll probably find me cooking, lifting, playing soccer, or at a poker table.",
   ],
   portrait: {
-    src: "/projects/Headshot.png",
+    src: "/projects/Headshot.jpg",
     alt: "Portrait of Ryder Sitcawich",
   },
   socials: [

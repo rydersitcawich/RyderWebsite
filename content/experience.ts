@@ -22,7 +22,7 @@ export const experience: Experience[] = [
     company: "Travelers",
     role: "Software Engineer Intern",
     location: "St. Paul, MN",
-    period: "May 2024 – Present",
+    period: "May 2024 – Aug 2024",
     bullets: [
       "Built a full-stack enterprise web app (React + AWS Lambda) to monitor app status and Kubernetes pod health for ~60 applications, each with 6 environments — supporting 6 dev teams and ~50 users.",
       "Integrated CI/CD via Jenkins and Argo; provisioned AWS infrastructure (S3, CloudFront, API Gateway, IAM, Lambda) with Terraform; and automated deployments through Urban Code Deploy.",
